@@ -7,15 +7,13 @@ def ky(nums, k):
     dct = dict(Counter(nums))
     key= list(dct.keys())
     key.sort()
-    print(key)
-    print(dct)
-    for i in key:
-        if dct[i] > 0:
-            for j in range(i+1,i+k):
-                if j not in dct.keys():
+    for i in key:  # number
+        if dct[i] > 0:  # 갯수가 남아 있다면
+            for j in range(i+1,i+k):  # i 포함 k개 만큼 확인
+                if j not in dct.keys():  # 있는 수인지
                     return False
-                if dct[j]<dct[i]:
+                if dct[j]<dct[i]:  # 더 큰 수의 갯수가 작으면                    return False
                     return False
-                dct[j]-=dct[i]
+                dct[j]-=dct[i]  # 아니라면 
     return True
 print(ky(nums, k))
