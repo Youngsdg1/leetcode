@@ -9,3 +9,5 @@ def dfs(i):
             return dfs(i+arr[i]) or dfs(i-arr[i])
         return False
     return dfs(start)
+
+print(dfs(5))
