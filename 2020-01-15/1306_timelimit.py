@@ -14,7 +14,7 @@ def game(arr, start):
 
     queue= []
     start_plus = plus_current(start)
-    start_minus = minus_current(start)
+    start_minus = minus_current(start)ddddddd
     if is_range(arr, start_plus):
         queue.append(start_plus)
     if is_range(arr, start_minus):
